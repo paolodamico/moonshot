@@ -103,8 +103,14 @@ STATIC_URL = "/static/"
 # https://github.com/encode/django-rest-framework
 
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.CursorPagination',
-    'PAGE_SIZE': 100
+    "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.CursorPagination",
+    "PAGE_SIZE": 100,
+    "TEST_REQUEST_RENDERER_CLASSES": (
+        "rest_framework.renderers.JSONRenderer",
+        "api.parsers.PlainTextJSONRenderer",  # to test Stripe webhooks
+    ),
+    "TEST_REQUEST_DEFAULT_FORMAT": "json",
 }
 
 
@@ -112,3 +118,4 @@ REST_FRAMEWORK = {
 # https://github.com/stripe/stripe-python
 
 STRIPE_API_KEY = os.environ.get("STRIPE_API_KEY", "")
+STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "")

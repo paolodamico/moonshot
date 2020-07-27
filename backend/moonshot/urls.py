@@ -2,7 +2,7 @@
 """
 from typing import List
 
-from api.views import PaymentViewSet
+from api.views import PaymentViewSet, StripeWebhookView
 from django.urls import path
 
 urlpatterns: List = [
@@ -10,5 +10,6 @@ urlpatterns: List = [
         "payments/",
         view=PaymentViewSet.as_view({"get": "list", "post": "create"}),
         name="payments",
-    )
+    ),
+    path("webhook/", view=StripeWebhookView.as_view(), name="stripe-webhook"),
 ]

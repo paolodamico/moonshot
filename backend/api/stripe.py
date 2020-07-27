@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Optional, Tuple
 
 from django.conf import settings
 
@@ -18,3 +18,19 @@ def create_payment_intent(id: str, amount: int, currency: str) -> Tuple[str, str
     )
 
     return (intent.id, intent.client_secret)
+
+
+def parse_webhook(payload: str, signature: str) -> Optional[stripe.Event]:
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, signature, settings.STRIPE_WEBHOOK_SECRET
+        )
+    except (ValueError, stripe.error.SignatureVerificationError):
+        event = None
+    return event
+
+
+def compute_webhook_signature(payload: str) -> str:
+    return stripe.webhook.WebhookSignature._compute_signature(
+        payload, settings.STRIPE_WEBHOOK_SECRET
+    )
