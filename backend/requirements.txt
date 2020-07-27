@@ -2,3 +2,4 @@ Django==3.0.8
 djangorestframework==3.11.0
 flake8==3.8.3 # dev-only
 black==19.10b0 # dev-only
+isort==5.2.0 # dev-only
