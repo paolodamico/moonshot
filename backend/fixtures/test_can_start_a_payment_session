@@ -1,0 +1,91 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://api.stripe.com/v1/payment_intents",
+                "body": "amount=5000&currency=GBP&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "headers": {
+                    "User-Agent": [
+                        "Stripe/v1 PythonBindings/2.49.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "Idempotency-Key": [
+                        "513df5e2-126a-4ba3-84b4-bddccf2e05db"
+                    ],
+                    "Content-Length": [
+                        "93"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "Content-Length": [
+                        "1369"
+                    ],
+                    "Date": [
+                        "Mon, 27 Jul 2020 21:10:55 GMT"
+                    ],
+                    "idempotency-key": [
+                        "513df5e2-126a-4ba3-84b4-bddccf2e05db"
+                    ],
+                    "stripe-version": [
+                        "2020-03-02"
+                    ],
+                    "access-control-allow-credentials": [
+                        "true"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31556926; includeSubDomains; preload"
+                    ],
+                    "access-control-expose-headers": [
+                        "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+                    ],
+                    "stripe-should-retry": [
+                        "false"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "access-control-allow-methods": [
+                        "GET, POST, HEAD, OPTIONS, DELETE"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "cache-control": [
+                        "no-cache, no-store"
+                    ],
+                    "access-control-max-age": [
+                        "300"
+                    ]
+                },
+                "body": {
+                    "string": "{\n  \"id\": \"pi_1H9duobbZloi31H76jb1ApQX\",\n  \"object\": \"payment_intent\",\n  \"amount\": 5000,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9db1ApQXuobbZloi31H76j\"\n  },\n  \"client_secret\": \"pi_1H9duobbZloi31H76jb1ApQX_secret_F1Da7tbmHlZUvuUgXPlybCzBu\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595884255,\n  \"currency\": \"gbp\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
+                }
+            }
+        }
+    ]
+}

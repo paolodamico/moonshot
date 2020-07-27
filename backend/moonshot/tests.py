@@ -1,8 +1,17 @@
 # -*- coding: utf-8 -*-
 
+import vcr
 from django.test import TestCase
 from rest_framework import status  # noqa: F401
 from rest_framework.test import APITestCase
+
+moonshot_vcr = vcr.VCR(
+    serializer="json",
+    cassette_library_dir="./fixtures",
+    record_mode="all",
+    match_on=["uri", "method", "body"],
+    filter_headers=["authorization", "x-stripe-client-user-agent"],
+)
 
 
 class MoonshotTestCase:
