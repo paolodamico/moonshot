@@ -1,0 +1,33 @@
+# Python # 
+*.py[cod] 
+*$py.class 
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+
+# IDE # 
+.vscode/* 
+!.vscode/settings.json 
+
+# Coverage reports 
+htmlcov/ 
+.coverage 
+.coverage.* 
+
+# Environments 
+.env 
+.venv 
+env/ 
+venv/
+.python-version 
+
+# mypy 
+.mypy_cache/ 
+
+# macOS
+.DS_Store
