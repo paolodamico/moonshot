@@ -1,7 +1,15 @@
 import uuid
+from typing import Dict
 
 from django.core.validators import MinValueValidator
 from django.db import models
+
+PRODUCTS: Dict = {
+    "photoshoot": dict(amount=19999, currency="USD"),
+    "troubleshoot": dict(amount=399999, currency="GBP"),
+    "peashoot": dict(amount=399, currency="USD"),
+    "shootout": dict(amount=4999, currency="GBP"),
+}
 
 
 class Payment(models.Model):
@@ -35,3 +43,4 @@ class Payment(models.Model):
         "status", max_length=16, choices=STATUS_CHOICES, default="created"
     )
     email = models.EmailField("email", blank=True)
+    product_id = models.CharField("product ID", max_length=64)

@@ -18,7 +18,7 @@ class PaymentFTC(MoonshotFunctionalTestCase):
         """
 
         response: HttpResponse = self.client.post(
-            "/payments/", dict(amount=5000, currency="GBP", email="luke@themoon.org")
+            "/payments/", dict(product_id="photoshoot", email="luke@themoon.org")
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
@@ -28,8 +28,8 @@ class PaymentFTC(MoonshotFunctionalTestCase):
         )
 
         instance = Payment.objects.get(uuid=response.data["uuid"])
-        self.assertEqual(instance.amount, 5000)
-        self.assertEqual(instance.currency, "GBP")
+        self.assertEqual(instance.amount, 19999)
+        self.assertEqual(instance.currency, "USD")
         self.assertEqual(instance.email, "luke@themoon.org")
         self.assertEqual(instance.status, "created")
         self.assertRegexpMatches(instance.stripe_id, r"^pi_[A-Za-z0-9]+$")
@@ -38,10 +38,10 @@ class PaymentFTC(MoonshotFunctionalTestCase):
 
         count = Payment.objects.count()
 
-        required_attrs = ["amount", "currency", "email"]
+        required_attrs = ["product_id"]
 
         for attr in required_attrs:
-            body: Dict = dict(amount=5000, currency="GBP", email="luke@themoon.org")
+            body: Dict = dict(product_id="troubleshoot", email="luke@themoon.org")
             body.pop(attr)
             response: HttpResponse = self.client.post(
                 "/payments/", body,
