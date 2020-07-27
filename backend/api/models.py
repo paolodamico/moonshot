@@ -31,7 +31,7 @@ class Payment(models.Model):
         "uuid", unique=True, db_index=True, default=uuid.uuid4, editable=False
     )
     stripe_id = models.CharField(
-        "stripe ID", max_length=128, unique=True, db_index=True
+        "stripe ID", max_length=128, db_index=True, blank=True,
     )
     amount = models.IntegerField(
         "amount", validators=[MinValueValidator(1)]
@@ -44,3 +44,4 @@ class Payment(models.Model):
     )
     email = models.EmailField("email", blank=True)
     product_id = models.CharField("product ID", max_length=64)
+    created = models.DateTimeField(auto_now_add=True)

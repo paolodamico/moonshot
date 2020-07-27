@@ -270,6 +270,742 @@
                     "string": "{\n  \"id\": \"pi_1H9dyRApQXuobbZlHZsOTu7K\",\n  \"object\": \"payment_intent\",\n  \"amount\": 19999,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9dyRApQXuobbZlHZsOTu7K\"\n  },\n  \"client_secret\": \"pi_1H9dyRApQXuobbZlHZsOTu7K_secret_S3QJAJWSnvFcnXq5jzNS8toiY\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595885707,\n  \"currency\": \"usd\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
                 }
             }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://api.stripe.com/v1/payment_intents",
+                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "headers": {
+                    "User-Agent": [
+                        "Stripe/v1 PythonBindings/2.49.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "Idempotency-Key": [
+                        "199aed3d-0c94-4d3c-ae3f-c926e41a2fe8"
+                    ],
+                    "Content-Length": [
+                        "94"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "request-id": [
+                        "req_fUZwOdsxcKTNpa"
+                    ],
+                    "original-request": [
+                        "req_fUZwOdsxcKTNpa"
+                    ],
+                    "idempotency-key": [
+                        "199aed3d-0c94-4d3c-ae3f-c926e41a2fe8"
+                    ],
+                    "stripe-version": [
+                        "2020-03-02"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-credentials": [
+                        "true"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "access-control-max-age": [
+                        "300"
+                    ],
+                    "stripe-should-retry": [
+                        "false"
+                    ],
+                    "cache-control": [
+                        "no-cache, no-store"
+                    ],
+                    "access-control-allow-methods": [
+                        "GET, POST, HEAD, OPTIONS, DELETE"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "access-control-expose-headers": [
+                        "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+                    ],
+                    "Date": [
+                        "Mon, 27 Jul 2020 21:42:18 GMT"
+                    ],
+                    "Content-Length": [
+                        "1370"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31556926; includeSubDomains; preload"
+                    ]
+                },
+                "body": {
+                    "string": "{\n  \"id\": \"pi_1H9e5OApQXuobbZlyXgubJCJ\",\n  \"object\": \"payment_intent\",\n  \"amount\": 19999,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9e5OApQXuobbZlyXgubJCJ\"\n  },\n  \"client_secret\": \"pi_1H9e5OApQXuobbZlyXgubJCJ_secret_1IuZtGsty9H2s70xPeQ5VIy1a\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595886138,\n  \"currency\": \"usd\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://api.stripe.com/v1/payment_intents",
+                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "headers": {
+                    "User-Agent": [
+                        "Stripe/v1 PythonBindings/2.49.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "Idempotency-Key": [
+                        "35f1acaf-a7ad-4a75-934e-2e3a357aea5b"
+                    ],
+                    "Content-Length": [
+                        "94"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "idempotency-key": [
+                        "35f1acaf-a7ad-4a75-934e-2e3a357aea5b"
+                    ],
+                    "original-request": [
+                        "req_wnF93d4PyyynsI"
+                    ],
+                    "stripe-should-retry": [
+                        "false"
+                    ],
+                    "Date": [
+                        "Mon, 27 Jul 2020 21:42:36 GMT"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31556926; includeSubDomains; preload"
+                    ],
+                    "stripe-version": [
+                        "2020-03-02"
+                    ],
+                    "Content-Length": [
+                        "1370"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-allow-credentials": [
+                        "true"
+                    ],
+                    "access-control-expose-headers": [
+                        "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+                    ],
+                    "request-id": [
+                        "req_wnF93d4PyyynsI"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "access-control-max-age": [
+                        "300"
+                    ],
+                    "access-control-allow-methods": [
+                        "GET, POST, HEAD, OPTIONS, DELETE"
+                    ],
+                    "cache-control": [
+                        "no-cache, no-store"
+                    ]
+                },
+                "body": {
+                    "string": "{\n  \"id\": \"pi_1H9e5fApQXuobbZlWwB8ABRV\",\n  \"object\": \"payment_intent\",\n  \"amount\": 19999,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9e5fApQXuobbZlWwB8ABRV\"\n  },\n  \"client_secret\": \"pi_1H9e5fApQXuobbZlWwB8ABRV_secret_SHcj0mLvpPLuHJTzWpoRx6XRm\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595886155,\n  \"currency\": \"usd\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://api.stripe.com/v1/payment_intents",
+                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "headers": {
+                    "User-Agent": [
+                        "Stripe/v1 PythonBindings/2.49.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "Idempotency-Key": [
+                        "6e56cfba-dd61-4442-9356-a13abdd56e69"
+                    ],
+                    "Content-Length": [
+                        "94"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "cache-control": [
+                        "no-cache, no-store"
+                    ],
+                    "request-id": [
+                        "req_PizmqZggDCfpPb"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "stripe-should-retry": [
+                        "false"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "access-control-allow-credentials": [
+                        "true"
+                    ],
+                    "original-request": [
+                        "req_PizmqZggDCfpPb"
+                    ],
+                    "Content-Length": [
+                        "1370"
+                    ],
+                    "stripe-version": [
+                        "2020-03-02"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "access-control-allow-methods": [
+                        "GET, POST, HEAD, OPTIONS, DELETE"
+                    ],
+                    "idempotency-key": [
+                        "6e56cfba-dd61-4442-9356-a13abdd56e69"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31556926; includeSubDomains; preload"
+                    ],
+                    "access-control-expose-headers": [
+                        "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+                    ],
+                    "access-control-max-age": [
+                        "300"
+                    ],
+                    "Date": [
+                        "Mon, 27 Jul 2020 21:43:11 GMT"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ]
+                },
+                "body": {
+                    "string": "{\n  \"id\": \"pi_1H9e6FApQXuobbZlb2BIJoKL\",\n  \"object\": \"payment_intent\",\n  \"amount\": 19999,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9e6FApQXuobbZlb2BIJoKL\"\n  },\n  \"client_secret\": \"pi_1H9e6FApQXuobbZlb2BIJoKL_secret_f5ubFp0WdZeLimp5PKUu8Crqn\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595886191,\n  \"currency\": \"usd\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://api.stripe.com/v1/payment_intents",
+                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "headers": {
+                    "User-Agent": [
+                        "Stripe/v1 PythonBindings/2.49.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "Idempotency-Key": [
+                        "24e823c8-3ca1-4606-bc69-fefb8a3dee01"
+                    ],
+                    "Content-Length": [
+                        "94"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "access-control-allow-methods": [
+                        "GET, POST, HEAD, OPTIONS, DELETE"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "access-control-max-age": [
+                        "300"
+                    ],
+                    "idempotency-key": [
+                        "24e823c8-3ca1-4606-bc69-fefb8a3dee01"
+                    ],
+                    "stripe-version": [
+                        "2020-03-02"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "request-id": [
+                        "req_TNWXDd7F7ViRDV"
+                    ],
+                    "access-control-allow-credentials": [
+                        "true"
+                    ],
+                    "Content-Length": [
+                        "1370"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31556926; includeSubDomains; preload"
+                    ],
+                    "stripe-should-retry": [
+                        "false"
+                    ],
+                    "original-request": [
+                        "req_TNWXDd7F7ViRDV"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "access-control-expose-headers": [
+                        "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+                    ],
+                    "Date": [
+                        "Mon, 27 Jul 2020 21:43:24 GMT"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "cache-control": [
+                        "no-cache, no-store"
+                    ]
+                },
+                "body": {
+                    "string": "{\n  \"id\": \"pi_1H9e6SApQXuobbZlMch1GQ3P\",\n  \"object\": \"payment_intent\",\n  \"amount\": 19999,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9e6SApQXuobbZlMch1GQ3P\"\n  },\n  \"client_secret\": \"pi_1H9e6SApQXuobbZlMch1GQ3P_secret_fnIgAJylki3nfy9cfuoiEluPk\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595886204,\n  \"currency\": \"usd\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://api.stripe.com/v1/payment_intents",
+                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "headers": {
+                    "User-Agent": [
+                        "Stripe/v1 PythonBindings/2.49.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "Idempotency-Key": [
+                        "7a6616f6-a28c-43fd-8ae3-ed963c9aa322"
+                    ],
+                    "Content-Length": [
+                        "94"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "stripe-should-retry": [
+                        "false"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "cache-control": [
+                        "no-cache, no-store"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31556926; includeSubDomains; preload"
+                    ],
+                    "stripe-version": [
+                        "2020-03-02"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "access-control-allow-methods": [
+                        "GET, POST, HEAD, OPTIONS, DELETE"
+                    ],
+                    "request-id": [
+                        "req_AyXxJ6ok9s1j6l"
+                    ],
+                    "Date": [
+                        "Mon, 27 Jul 2020 21:44:57 GMT"
+                    ],
+                    "access-control-allow-credentials": [
+                        "true"
+                    ],
+                    "Content-Length": [
+                        "1370"
+                    ],
+                    "access-control-max-age": [
+                        "300"
+                    ],
+                    "idempotency-key": [
+                        "7a6616f6-a28c-43fd-8ae3-ed963c9aa322"
+                    ],
+                    "original-request": [
+                        "req_AyXxJ6ok9s1j6l"
+                    ],
+                    "access-control-expose-headers": [
+                        "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+                    ]
+                },
+                "body": {
+                    "string": "{\n  \"id\": \"pi_1H9e7xApQXuobbZlcb0qss14\",\n  \"object\": \"payment_intent\",\n  \"amount\": 19999,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9e7xApQXuobbZlcb0qss14\"\n  },\n  \"client_secret\": \"pi_1H9e7xApQXuobbZlcb0qss14_secret_15nt3IVFSrwPRD1DAtBnWoG6K\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595886297,\n  \"currency\": \"usd\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://api.stripe.com/v1/payment_intents",
+                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "headers": {
+                    "User-Agent": [
+                        "Stripe/v1 PythonBindings/2.49.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "Idempotency-Key": [
+                        "23160c79-40db-4eeb-9cc9-64e20c2e0e9f"
+                    ],
+                    "Content-Length": [
+                        "94"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Date": [
+                        "Mon, 27 Jul 2020 21:45:59 GMT"
+                    ],
+                    "original-request": [
+                        "req_6fGKNEixSxxWGP"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31556926; includeSubDomains; preload"
+                    ],
+                    "request-id": [
+                        "req_6fGKNEixSxxWGP"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "access-control-expose-headers": [
+                        "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+                    ],
+                    "access-control-max-age": [
+                        "300"
+                    ],
+                    "cache-control": [
+                        "no-cache, no-store"
+                    ],
+                    "idempotency-key": [
+                        "23160c79-40db-4eeb-9cc9-64e20c2e0e9f"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "Content-Length": [
+                        "1370"
+                    ],
+                    "stripe-should-retry": [
+                        "false"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "stripe-version": [
+                        "2020-03-02"
+                    ],
+                    "access-control-allow-credentials": [
+                        "true"
+                    ],
+                    "access-control-allow-methods": [
+                        "GET, POST, HEAD, OPTIONS, DELETE"
+                    ]
+                },
+                "body": {
+                    "string": "{\n  \"id\": \"pi_1H9e8xApQXuobbZlr2DWCpQ7\",\n  \"object\": \"payment_intent\",\n  \"amount\": 19999,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9e8xApQXuobbZlr2DWCpQ7\"\n  },\n  \"client_secret\": \"pi_1H9e8xApQXuobbZlr2DWCpQ7_secret_eEpxOGUqioHBxK3jRueEm0gc4\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595886359,\n  \"currency\": \"usd\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://api.stripe.com/v1/payment_intents",
+                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "headers": {
+                    "User-Agent": [
+                        "Stripe/v1 PythonBindings/2.49.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "Idempotency-Key": [
+                        "07aac26b-471b-4ff4-8a6c-e98124d98919"
+                    ],
+                    "Content-Length": [
+                        "94"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "cache-control": [
+                        "no-cache, no-store"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "access-control-expose-headers": [
+                        "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+                    ],
+                    "access-control-max-age": [
+                        "300"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "Content-Length": [
+                        "1370"
+                    ],
+                    "access-control-allow-credentials": [
+                        "true"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31556926; includeSubDomains; preload"
+                    ],
+                    "stripe-should-retry": [
+                        "false"
+                    ],
+                    "request-id": [
+                        "req_rnKadFr3Cssrkc"
+                    ],
+                    "Date": [
+                        "Mon, 27 Jul 2020 21:46:27 GMT"
+                    ],
+                    "access-control-allow-methods": [
+                        "GET, POST, HEAD, OPTIONS, DELETE"
+                    ],
+                    "stripe-version": [
+                        "2020-03-02"
+                    ],
+                    "idempotency-key": [
+                        "07aac26b-471b-4ff4-8a6c-e98124d98919"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "original-request": [
+                        "req_rnKadFr3Cssrkc"
+                    ]
+                },
+                "body": {
+                    "string": "{\n  \"id\": \"pi_1H9e9PApQXuobbZlvJLPflTp\",\n  \"object\": \"payment_intent\",\n  \"amount\": 19999,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9e9PApQXuobbZlvJLPflTp\"\n  },\n  \"client_secret\": \"pi_1H9e9PApQXuobbZlvJLPflTp_secret_hVYohH6Qz9OLonWTgKB8FRYPL\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595886387,\n  \"currency\": \"usd\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://api.stripe.com/v1/payment_intents",
+                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "headers": {
+                    "User-Agent": [
+                        "Stripe/v1 PythonBindings/2.49.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "Content-Type": [
+                        "application/x-www-form-urlencoded"
+                    ],
+                    "Idempotency-Key": [
+                        "0d262d85-26fc-4095-bbd2-c168b7658014"
+                    ],
+                    "Content-Length": [
+                        "94"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "cache-control": [
+                        "no-cache, no-store"
+                    ],
+                    "stripe-should-retry": [
+                        "false"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "access-control-expose-headers": [
+                        "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "access-control-allow-origin": [
+                        "*"
+                    ],
+                    "Date": [
+                        "Mon, 27 Jul 2020 21:46:37 GMT"
+                    ],
+                    "Content-Length": [
+                        "1370"
+                    ],
+                    "access-control-max-age": [
+                        "300"
+                    ],
+                    "original-request": [
+                        "req_V9AOXbDeIFlfKs"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=31556926; includeSubDomains; preload"
+                    ],
+                    "access-control-allow-methods": [
+                        "GET, POST, HEAD, OPTIONS, DELETE"
+                    ],
+                    "Server": [
+                        "nginx"
+                    ],
+                    "idempotency-key": [
+                        "0d262d85-26fc-4095-bbd2-c168b7658014"
+                    ],
+                    "request-id": [
+                        "req_V9AOXbDeIFlfKs"
+                    ],
+                    "access-control-allow-credentials": [
+                        "true"
+                    ],
+                    "stripe-version": [
+                        "2020-03-02"
+                    ]
+                },
+                "body": {
+                    "string": "{\n  \"id\": \"pi_1H9e9ZApQXuobbZldJeOPTX1\",\n  \"object\": \"payment_intent\",\n  \"amount\": 19999,\n  \"amount_capturable\": 0,\n  \"amount_received\": 0,\n  \"application\": null,\n  \"application_fee_amount\": null,\n  \"canceled_at\": null,\n  \"cancellation_reason\": null,\n  \"capture_method\": \"automatic\",\n  \"charges\": {\n    \"object\": \"list\",\n    \"data\": [\n\n    ],\n    \"has_more\": false,\n    \"total_count\": 0,\n    \"url\": \"/v1/charges?payment_intent=pi_1H9e9ZApQXuobbZldJeOPTX1\"\n  },\n  \"client_secret\": \"pi_1H9e9ZApQXuobbZldJeOPTX1_secret_mrP9ojj49aSVQQdPKB1uKqq5l\",\n  \"confirmation_method\": \"automatic\",\n  \"created\": 1595886397,\n  \"currency\": \"usd\",\n  \"customer\": null,\n  \"description\": null,\n  \"invoice\": null,\n  \"last_payment_error\": null,\n  \"livemode\": false,\n  \"metadata\": {\n    \"moonshot_id\": \"1\",\n    \"integration_check\": \"accept_a_payment\"\n  },\n  \"next_action\": null,\n  \"on_behalf_of\": null,\n  \"payment_method\": null,\n  \"payment_method_options\": {\n    \"card\": {\n      \"installments\": null,\n      \"network\": null,\n      \"request_three_d_secure\": \"automatic\"\n    }\n  },\n  \"payment_method_types\": [\n    \"card\"\n  ],\n  \"receipt_email\": null,\n  \"review\": null,\n  \"setup_future_usage\": null,\n  \"shipping\": null,\n  \"source\": null,\n  \"statement_descriptor\": null,\n  \"statement_descriptor_suffix\": null,\n  \"status\": \"requires_payment_method\",\n  \"transfer_data\": null,\n  \"transfer_group\": null\n}\n"
+                }
+            }
         }
     ]
 }

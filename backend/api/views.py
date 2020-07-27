@@ -5,7 +5,5 @@ from .serializers import PaymentSerializer
 
 
 class PaymentViewSet(ModelViewSet):
-    queryset = Payment.objects.all()
+    queryset = Payment.objects.order_by("-created")
     serializer_class = PaymentSerializer
-    lookup_field = "uuid"
-    lookup_url_kwarg = "uuid"

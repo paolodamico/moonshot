@@ -1,13 +1,41 @@
+import random
 from typing import Dict
 
 from django.http import HttpResponse
 
 from moonshot.tests import MoonshotFunctionalTestCase, moonshot_vcr, status
 
-from ..models import Payment
+from ..models import PRODUCTS, Payment
 
 
 class PaymentFTC(MoonshotFunctionalTestCase):
+    def helper_create_random_payments(self, length: int = 5) -> None:
+
+        for i in range(length):
+            product_id: str = random.choice(list(PRODUCTS.keys()))
+            Payment.objects.create(
+                product_id=product_id,
+                amount=PRODUCTS[product_id]["amount"],
+                currency=PRODUCTS[product_id]["currency"],
+                email=f"person{random.randint(999, 9999)}@moonshot.io",
+                status=random.choice([s[0] for s in Payment.STATUS_CHOICES]),
+            )
+
+    # Listing payments
+    def test_can_list_payments(self):
+        self.helper_create_random_payments()
+
+        response: HttpResponse = self.client.get("/payments/")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(len(response.data["results"]), Payment.objects.count())
+
+        for item in response.data["results"]:
+            instance: Payment = Payment.objects.get(uuid=item["uuid"])
+            self.assertEqual(item["status"], instance.status)
+            self.assertEqual(item["product_id"], instance.product_id)
+            self.assertEqual(item["amount"], instance.amount)
+            self.assertEqual(item["currency"], instance.currency)
 
     # Creating payments
 
