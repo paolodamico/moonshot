@@ -7,8 +7,7 @@ from django.db import models
 PRODUCTS: Dict = {
     "photoshoot": dict(amount=19999, currency="USD"),
     "troubleshoot": dict(amount=399999, currency="GBP"),
-    "peashoot": dict(amount=399, currency="USD"),
-    "shootout": dict(amount=4999, currency="GBP"),
+    "peashoot": dict(amount=1499, currency="USD"),
 }
 
 
