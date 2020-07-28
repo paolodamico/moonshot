@@ -9,14 +9,17 @@ import {
   Button,
   Paragraph,
   Text,
+  toaster,
 } from "evergreen-ui";
 import { createPayment } from "services/payments";
+import { useHistory } from "react-router-dom";
 
 const PurchaseSheet = (props) => {
   const { product, isShown, onCloseComplete } = props;
   const [state, setState] = useState({ step: "capture" });
   const stripe = useStripe();
   const elements = useElements();
+  const history = useHistory();
 
   const cardElementOptions = {
     style: {
@@ -60,6 +63,7 @@ const PurchaseSheet = (props) => {
 
   const handlePurchase = async (event) => {
     event.preventDefault();
+    setState({ ...state, isLoading: true });
     const result = await stripe.confirmCardPayment(state.stripeClientSecret, {
       payment_method: {
         card: elements.getElement(CardElement),
@@ -67,16 +71,15 @@ const PurchaseSheet = (props) => {
     });
 
     if (result.error) {
-      // Show error to your customer (e.g., insufficient funds)
-      console.log(result.error.message);
+      // Payment could not be processed
+      toaster.danger("Your payment could not be completed!", {
+        description: result.error.message,
+      });
+      setState({ ...state, isLoading: false });
     } else {
       // The payment has been processed!
       if (result.paymentIntent.status === "succeeded") {
-        // Show a success message to your customer
-        // There's a risk of the customer closing the window before callback
-        // execution. Set up a webhook or plugin to listen for the
-        // payment_intent.succeeded event that handles any business critical
-        // post-payment actions.
+        history.push(`/purchased?name=${product.name}`);
       }
     }
   };
