@@ -48,7 +48,10 @@ class PaymentSerializer(serializers.ModelSerializer):
 
         # Create the PaymentIntent with Stripe first
         stripe_id, client_secret = create_payment_intent(
-            id=instance.id, amount=instance.amount, currency=instance.currency
+            id=instance.uuid,
+            amount=instance.amount,
+            currency=instance.currency,
+            email=instance.email,
         )
 
         # Update the instance with the PaymentIntent ID

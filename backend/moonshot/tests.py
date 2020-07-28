@@ -9,7 +9,7 @@ moonshot_vcr = vcr.VCR(
     serializer="json",
     cassette_library_dir="./fixtures",
     record_mode="once",
-    match_on=["uri", "method", "body"],
+    match_on=["uri", "method"],
     filter_headers=["authorization", "x-stripe-client-user-agent"],
 )
 

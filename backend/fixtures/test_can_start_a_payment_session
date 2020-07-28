@@ -5,7 +5,7 @@
             "request": {
                 "method": "POST",
                 "uri": "https://api.stripe.com/v1/payment_intents",
-                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment",
+                "body": "amount=19999&currency=USD&metadata[moonshot_id]=1&metadata[integration_check]=accept_a_payment&receipt_email=luke@themoon.org",
                 "headers": {
                     "User-Agent": [
                         "Stripe/v1 PythonBindings/2.49.0"
