@@ -1,6 +1,15 @@
 import React, { useState } from "react";
-import { Pane, Text, Heading, Alert, Link } from "evergreen-ui";
+import {
+  Pane,
+  Text,
+  Heading,
+  Alert,
+  Link,
+  Button,
+  ArrowRightIcon,
+} from "evergreen-ui";
 import { ProductCard, PurchaseSheet } from "components/common";
+import { Link as RouterLink } from "react-router-dom";
 
 const Home = () => {
   const [state, setState] = useState({
@@ -58,6 +67,26 @@ const Home = () => {
           </span>{" "}
           Moon products.
         </Text>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "flex-end",
+            width: "100%",
+            maxWidth: 1000,
+          }}
+        >
+          <RouterLink to="/list" style={{ textDecoration: "none" }}>
+            <Button
+              iconAfter={ArrowRightIcon}
+              intent="success"
+              appearance="primary"
+            >
+              Payment List
+            </Button>
+          </RouterLink>
+        </div>
 
         <Alert
           intent="none"
