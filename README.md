@@ -60,3 +60,29 @@ A few details on the testing implementation:
 ## 📑Feedback log
 
 As part of this project, a detailed [feedback log](/feedback-log/README.md) was kept to record any friction points, potential improvements, and useful/helpful interactions. The log can be viewed [here](/feedback-log/README.md).
+
+## 🚀Features
+
+This project follows [this guide](https://stripe.com/docs/payments/accept-a-payment) and as such incorporates the following features:
+- An internal list of products and prices with a user interface to see the products and descriptions on the home page.
+- The user can select any of the products to purchase.
+   - They will be asked for their email address, and the API will create a `PaymentIntent` on Stripe.
+   - They will then be asked to enter their payment information using Stripe [Elements](https://stripe.com/payments/elements).
+   - If the payment fails an error message will be shown at the top of the screen and the user will be able to retry the payment (see [Stripe Testing](https://stripe.com/docs/testing) for sample card numbers that simulate failures).
+   - If the payment is successful the user is taken to a payment confirmation screen.
+- The API will listen for Stripe's `payment_intent.succeeded` webhook to internally mark the `PaymentIntent` as `paid`. The webhook will validate that the webhook comes from Stripe using the [signature validation](https://stripe.com/docs/webhooks/signatures) mechanism. _To use locally [Stripe CLI](https://stripe.com/docs/stripe-cli) will be required._
+- The project also incorporates a user interface to list all payments on http://localhost:3000/list. This can be used to verify that the webhook was properly received and handled.
+- The project will easily run through the [automated testing](https://stripe.com/docs/payments/accept-a-payment#web-test-integration) by executing the payments with the provided card numbers. Below is the expected results after doing all three payments.
+
+<img src="feedback-log/images/moonshot-tests.jpg?raw=true" width="600" />
+
+> :warning: This is a test project not intended for production. Security issues (such as secret keys, debugging mode), performance issues or production-ready elements (e.g. not using SQLite as the database engine) are not covered as they are out of the scope of this project. **Do not use in production.**
+
+## 💛Attributions
+A special thanks to the following people/entities (plus any other project dependencies):
+- [Pexels](https://www.pexels.com/) for stock photos.
+- [Unsplash](https://unsplash.com/) for stock photos.
+- [Evergreen](https://evergreen.segment.com) for the UI components.
+
+## 👩‍⚖️License
+This project is licensed under an [MIT license](/LICENSE). Free to use, distribute and modify for personal and commercial use. License and copyright notice should be posted.

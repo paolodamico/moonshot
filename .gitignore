@@ -11,8 +11,7 @@ db.sqlite3
 media
 
 # IDE # 
-.vscode/* 
-!.vscode/settings.json 
+.vscode/*
 
 # Coverage reports 
 htmlcov/ 
