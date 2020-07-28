@@ -6,13 +6,13 @@ black = @black --target-version py38 $(BACKEND)
 all: test
 
 
-install-dev:
+install:
 	pip install -r backend/requirements.txt
 	npm --prefix ./frontend install ./frontend
 
 
-test: install-dev lint
-	python manage.py test
+test: install lint
+	cd backend && python manage.py test
 
 
 format:

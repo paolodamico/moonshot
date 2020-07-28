@@ -6,32 +6,32 @@ Moonshot is a sample project to test Stripe's [PaymentIntents](https://stripe.co
 
 ## 👨‍💻Running locally
 
-This repository contains separated frontend and backend (REST API) components. The frontend is built on [React.js](https://github.com/facebook/react/) and the backend is built on [Django REST framework](https://github.com/encode/django-rest-framework). Both environments are required to properly run this application. This section will guide you on setting up both environments.
+This repository contains separate frontend and backend (REST API) components. The frontend is built on [React.js](https://github.com/facebook/react/) and the backend is built on [Django REST framework](https://github.com/encode/django-rest-framework). Both environments are required to properly run this application. This section will guide you on setting up both environments.
 
 1. Install Python 3.8 ([pyenv](https://github.com/pyenv/pyenv) recommended) and [Node.js](https://nodejs.org/en/download/).
 1. Clone the repository and `cd` into the project directory.
-1. Set-up and activate a virtual environment.
+1. Set-up and activate a virtual environment (for Python).
    ```bash
    python3 -m venv env && source env/bin/activate
    ```
 1. Install the projects dependencies
    ```bash
-   make install-test
+   make install
    ```
 1. Install [Stripe CLI](https://stripe.com/docs/payments/handling-payment-events#install-cli), login and listen for webhooks.
    ```bash
-   brew install stripe/stripe-cli/stripe # adjust to your OS / preferences
+   brew install stripe/stripe-cli/stripe # adjust command to your OS / preferences
    stripe login
    stripe listen --forward-to http://localhost:8000/webhook/
    ```
-1. Set the following environment variables (a [Stripe Secret Key](https://stripe.com/docs/keys) will be required).
+1. Set the following environment variables (a [Stripe Secret Key](https://stripe.com/docs/keys) will be required). **Do not use the sample values provided below**.
 
    ```bash
     export STRIPE_API_KEY=sk_test_L5UPP43S7sZCE29pd6O
     export STRIPE_WEBHOOK_SECRET=whsec_oOgN7Ec0JPKVTjuTflKvO7 # obtained from Stripe CLI (previous step; last command)
    ```
 
-1. Set the corresponding **publishable key** on `frontend/src/constants.js` file: 2
+1. Set the corresponding **publishable key** on `frontend/src/constants.js` file (line 2). **Do not use the sample value provided below**.
    ```js
    export const STRIPE_PUBLIC_KEY = "pk_test_RBFqFUXP02gVq00UX2gVbi";
    ```
