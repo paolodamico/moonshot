@@ -5,7 +5,7 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^1.1.2",
     "@stripe/stripe-js": "^1.8.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "evergreen-ui": "^4.29.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
